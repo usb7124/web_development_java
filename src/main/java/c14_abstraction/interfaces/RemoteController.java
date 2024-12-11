@@ -5,8 +5,10 @@ public class RemoteController {
     private PowerButton powerButton;
     private ChannelDownButton channelDownButton;
     private ChannelUpButton channelUpButton;
+    // 추가된 필드
     private VolumeDownButton volumeDownButton;
-    private VolumeUpButton volumeUpButton;
+    private VolumeUpButton volumeUpButton;  // 이 필드들을 추가하는 순간에 AllArgsConstructor가 아님
+    // 그렇기 때문에 밑에 있는 생성자를 수정할 필요가 있음
 
     /*
         AllArgsController를 선언하세요
@@ -16,9 +18,14 @@ public class RemoteController {
         this.powerButton = powerButton;
         this.channelDownButton = channelDownButton;
         this.channelUpButton = channelUpButton;
+        // 소괄호 내에 매개변수를 수정했기 때문에 이하의 코드가 필요함
         this.volumeDownButton = volumeDownButton;
         this.volumeUpButton = volumeUpButton;
+        // 마찬가지로 이걸 완성하는 순간 Main
     }
+    /*
+        AllargsConstructor를 정의하세요
+     */
 
     // 메서드 정의
     // PowerButton의 메서드 구현
@@ -45,6 +52,7 @@ public class RemoteController {
         channelUpButton.onUp();
     }
 
+    // VolumeDownButton 메서드 구현
     public void onPressedVolumeDownButton() {
         volumeDownButton.onPressed();
     }
@@ -53,6 +61,7 @@ public class RemoteController {
         volumeDownButton.onDown();
     }
 
+    // VolumeUpButton 메서드 구현
     public void onPressedVolumeUpButton() {
         volumeUpButton.onPressed();
     }
@@ -60,6 +69,4 @@ public class RemoteController {
     public void onUpVolumeUpButton() {
         volumeUpButton.onUp();
     }
-
-
 }
