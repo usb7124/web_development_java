@@ -46,5 +46,6 @@ public class StringSet {
         // List로 바뀌었으니 순서가 있고, 이를 정렬할 수 있음
         Collections.sort(strList);
         System.out.println("정렬 후 List : " + strList);
+
     }
 }
