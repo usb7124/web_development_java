@@ -81,5 +81,10 @@ public class StudentSet {
 
         // 기존의 정렬되지 않은, 그리고 붕복이 남아있는 list와 set에 정렬된 것들만 남기고 싶다면
         // .deleteAll()을 사용해서 다 비워내고, 다시 재 대입하시면 됩니다.
+
+        /*
+            c21_json 패키지 생성
+            JSON01.java 파일 생성
+         */
     }
 }
